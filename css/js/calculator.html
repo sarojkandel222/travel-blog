@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script type="text/javascript">
+		function combine(t)
+		{
+			txtdisplay.value=txtdisplay.value+t.value;
+		}
+		function Adddot()
+		{
+			var d=document.getElementById("txtdisplay");
+			if (d.value.indexOf(".")==-1) 
+			{
+				d.valuet=".";
+			}
+		}
+		function transfer(t)
+
+		{
+			var d=document.getElementById("txtdisplay");
+			var m=document.getElementById("txtmemory");
+			var opr=document.getElementById("txtoperator");
+			m.value=d.value;
+			opr.value=t.value;
+			d.value="";
+		}
+		function calculate()
+		{
+			
+			var d=document.getElementById("txtdisplay");
+			var m=document.getElementById("txtmemory");
+			var opr=document.getElementById("txtoperator");
+			if (opr.value=='+') 
+			{
+				d.value=Number(m.value)+Number(d.value);
+			}
+			else if (opr.value=='-') {
+				d.value=Number(m.value)-Number(d.value);
+			}
+			else if (opr.value=='/') {
+				d.value=Number(m.value)/Number(d.value);
+			}
+			else if(opr.value=='*') {
+				d.value=Number(m.value)*Number(d.value);
+			}
+		}
+	</script>
+</head>
+
+<body><center>
+		 <input type="text" value="" id="txtdisplay"><br>
+		 <input type="button" id="btnone" value="1"onclick="combine(this)">
+		 <input type="button" id="btntwo" value="2"onclick="combine(this)">
+		 <input type="button" id="btnthree" value="3"onclick="combine(this)">
+		 <input type="button" id="btnclear" value="AC"><br>
+		 <input type="button" id="btnfour" value="4"onclick="combine(this)">
+		 <input type="button" id="btnfive" value="5"onclick="combine(this)">
+		 <input type="button" id="btnsix" value="6"onclick="combine(this)">
+		 <input type="button" id="btnzero" value="0"onclick="combine(this)"><br>
+		 <input type="button" id="btnseven" value="7"onclick="combine(this)">
+		 <input type="button" id="btneight" value="8"onclick="combine(this)">
+		 <input type="button" id="btnnine" value="9"onclick="combine(this)">
+		 <input type="button" id="btnequal" value="=" onclick="calculate()"><br>
+		 <input type="button" id="btnplus" value="+"onclick="transfer(this)">
+		 <input type="button" id="btnsub" value="-"onclick="transfer(this)">
+		 <input type="button" id="btndiv" value="/"onclick="transfer(this)">
+		 <input type="button" id="btnmultiplication" value="*"onclick="transfer(this)">
+		 <input type="button" id="btndot" value="."onclick="Adddot()"><br>
+		 <input type="text" id="txtmemory"><br>
+		 <input type="text" id="txtoperator">
+</body></center>
+</html>

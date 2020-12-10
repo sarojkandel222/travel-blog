@@ -1,0 +1,15 @@
+.Switerland
+{
+	margin: 10px 50px;
+}
+.Switerland img
+{
+	transition: 1s;
+	padding: 15px;
+	width: 250px;
+}
+.Switerland img:hover
+{
+	filter: grayscale(100%);
+	transform: scale(1.1);
+}

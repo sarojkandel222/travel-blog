@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>photo collage</title>
+<script type="text/javascript">	
+
+function next()
+{
+	var c=document.getElementById("current");
+	var image=document.getElementById("myimage");
+
+	var photo=c.value;
+	c.value=Number(c.value) +1;
+	image.src=c.value+".jpg";
+}
+function previous()
+{
+	var c=document.getElementById("current");
+	var image=document.getElementById("myimage");
+
+	var photo=c.value;
+	c.value=Number(c.value) -1;
+	image.src=c.value+".jpg";
+}
+
+
+
+</script>
+</head>
+
+<body>
+ <img src="1.jpg" id="myimage" width="400px" height="400px">
+ <br>
+ <input type="text" value="1" id="current">
+ <br><input type="button" id="btnPrevious" value="previous" onclick="previous()">
+ <input type="button" id="btnNext"value="Next" onclick="next()">
+</body>
+</html>

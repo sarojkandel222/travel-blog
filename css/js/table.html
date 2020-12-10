@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Table</title>
+	<script type="text/javascript">
+		function change()
+		{
+			var tds = document.getElementsByTagName("td");
+			for (i=0;i<tds.length; i++)
+			{
+				tds[i].style.backgroundColor="red";
+			}
+
+		}
+
+	</script>
+</head>
+<body><center>
+	<table border="2">
+		<tr>
+			<td>S.NO</td>
+			<td>NAME</td>
+			<td>AGE</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>SAROJ</td>
+			<td>21</td>
+		</tr>
+
+		<tr>
+			<td>2</td>
+			<td>SURAJ</td>
+			<td>19</td>
+		</tr>
+	</table><br>
+
+<input type="button" id="change" value="Change All TD Background" onclick="change()">
+</body></center>
+</html>

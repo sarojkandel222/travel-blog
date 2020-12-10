@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login form</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+<script>
+ 	function validate()
+ 	{var un=document.getElementById("txtusername");
+ 		if(un.value==''){
+ 			alert("please enter the username");
+ 		}
+ 		var un=document.getElementById("txtpassword");
+ 		if(un.value==''){
+ 			alert("please enter the username");
+ 		}
+ 	}
+
+	</script>
+</head>
+
+<body>
+<div class="login-page">
+<div class="form">
+	<form class="register-form">
+	<input type="text"  placeholder="user name"/>
+	<input type="text" placeholder="password"/>
+	<input type="text" placeholder="email id"/>
+	<button>Create</button>
+	<p class="message">Already Registered? <a href="#">Login</a>
+	</p>
+	</form>
+	<form class="login-form">
+		<input type="text" id="username" placeholder="user name" onclick="validate()">
+		<input type="password" id="password" placeholder="password" onclick="validate()">
+		<button>Login</button>
+		
+		<p class="message">Not Registered? <a href="#">Register </a></p>
+	</form>
+	</div>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>photo collage</title>
+	<a href="http://www.freepik.com">Designed by Freepik</a>		
+
+<script type="text/javascript">	
+
+function growwidth()
+{
+var image=document.getElementById("myimage");
+image.width=image.width+50;
+
+}
+function growheight()
+{
+var image=document.getElementById("myimage");
+image.height=image.height+50;	
+}
+function setborder()
+{
+var image=document.getElementById("myimage");
+image.style.border="5px solid red";		
+}
+function hide()
+{
+	var image=document.getElementById("myimage");
+	image.style.display="none";		
+}
+function show()
+{
+	var image=document.getElementById("myimage");
+	image.style.display="block";
+}
+
+
+</script>
+</head>
+
+<body>
+ <img src="1.jpg" id="myimage" width="400px" height="400px">
+ <br>
+ <input type="button" id="btnborder" value="setborder" onclick="setborder()"> 
+ <input type="button" id="btnhide" value="hide" onclick="hide()"><br>
+ <input type="button" id="btnshow" value="show" onclick="show()">
+ <input type="button" id="btnwidth" value="growwidth" onclick="growwidth()"><br>
+<input type="button" id="btnheight" value="growheight" onclick="growheight()">
+</body>
+</html>
